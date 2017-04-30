@@ -119,7 +119,7 @@ class EntryTableViewController: UITableViewController, UISearchBarDelegate, UITe
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         view.endEditing(true)
         if segue.identifier == "toDetail" {
-            if let DetailVC = segue.destination as? DetailViewController,
+            if let DetailVC = segue.destination as? DetailEntryViewController,
                 let indexPath = tableView.indexPathForSelectedRow {
                 var entries = [Entry]()
                 if searchActive {
